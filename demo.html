@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Interesting image demo</title>
+        <script src="cielab.js"></script>
+        <script src="interesting.js"></script>
+        <script src="maxsubsequence.js"></script>
+        <script src="loader.js"></script>
+        <script src="demo.js"></script>
+    </head>
+    <body>
+        <form action="/" method="post">
+            <div>
+                <label for="inputImageFile">
+                    Select an image
+                </label>
+                <input type="file" id="inputImageFile" name="inputImageFile" />
+            </div>
+            <div>
+                <label for="txtWidth">
+                    Interesting zone width:
+                </label>
+                <input type="text" id="txtWidth" name="txtWidth" />
+            </div>
+            <div>
+                <label for="txtHeight">
+                    Interesting zone height:
+                </label>
+                <input type="text" id="txtHeight" name="txtHeight" />
+            </div>
+            <div>
+                <input type="button" onclick="locateInterestingZone()"
+                       value="Locate!" id="btnLocate" />
+            </div>
+        </form>
+        <canvas id="sourceCanvas"></canvas>
+        <canvas id="interestingCanvas"></canvas>
+    </body>
+</html>
